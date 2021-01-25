@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+    <head>
+        <title>JavaScript - tuntiharjoitus</title>
+        <script src="tehtavat.js"></script>
+
+        <script>
+            function buttonMuutaClicked(){
+                let n = document.getElementById("etunimi");
+
+                //input kentässä arvo luetaan value-properystä
+                let nimi = n.value;
+
+                document.getElementById("tokanimi").value =nimi;
+                alert("Nimi: "+ nimi);
+                let p = document.getElementById("kappale");
+                p.style.color = "red";
+                
+                //HUOM! Ero getElementById
+                let info = document.querySelector("#info")
+                //HUOM! Info ei ole input-kenttä -> ei käytössä value -propertyä
+                info.innerHTML = "Klikkasit nappia";
+
+            }
+
+            function buttonLisaaClicked(){
+                let lista = document.getElementById("lista");
+                let item = document.createElement("li");
+
+                let n = document.getElementById("etunimi").value;
+                item.innerHTML = "<b>" + n + "</b>";
+                lista.appendChild(item);
+
+
+            }
+        </script>
+    </head>
+    <body id="pody">
+        <p id="kappale">Kokeillaan JS</p>
+        <p id="info"></p>
+
+        <!--Ei saa käyttää formia!-->
+        <input type="text" id="etunimi" />
+        <input type="text" id="tokanimi" />
+        <button id="muuta" onclick="buttonMuutaClicked();">Muuta</button>
+        <button id="lisaa" onclick="buttonLisaaClicked();">Lisää</button>
+    
+        <ul id=lista>
+            <li>Maija</li>
+            <li>Liisa</li>
+        </ul>
+    </body>
+</html>

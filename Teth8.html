@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Teht&auml;v&auml; 8
+        </title>
+        <link rel="stylesheet" href="teht8.css">
+    </head>
+    <body>
+
+        <form method="GET" action="http://codez.savonia.fi/jussi/api/test.php">
+
+            <table>
+                <tr>
+                    <td id="label"><label for="oppilaitos">Oppilaitos:</label></td>
+                    <td><input type="text" id="oppilaitos" value="Savonia AMK" disabled></td>
+                </tr>
+                <tr>
+                    <td id="label"><label for="nimi">Nimi:</label></td>
+                    <td><input type="text" id="nimi" name="nimi"></td>
+                </tr>
+                <tr>
+                    <td id="label"><label for="Vuosikurssi">Vuosikurssi:</label></td>
+                    <td><input type="password" id="Vuosikurssi" name="Vuosikurssi"></td>
+                </tr>
+                <tr>
+                    <td id="label"><label for="course">Kurssin nimi:</label></td>
+                    <td><select name="course[]" size="5" multiple>
+                        <optgroup label="Perusaineet">
+                        <option name="course_1" value="Matematiikka">Matematiikka</option>
+                        <option name="course_2" value="Fysiikka">Fysiikka</option>
+                        <option name="course_3" value="Kemia">Kemia</option>
+                    </optgroup>
+                    <optgroup label="Ammattiaineet">
+                        <option name="course_4" value="Tietorakenteet">Tietorakenteet</option>
+                        <option name="course_5" value="Webohjelmointi">Webohjelmointi</option>
+                    </optgroup>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td id="label"><label for="opetusmuoto">Kurssin tyyppi:</label></td>
+                    <td>
+                        <select name="opetusmuoto" >
+                        <option value="lahiopetus" name="opetusmuoto_1">Lähiopetus</option>
+                        <option value="etaopetus" name="opetusmuoto_2">Etäopetus</option>
+                        <option value="itsenainen opiskelu" name="opetusmuoto_3">Itsenäinen opiskelu</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td id="label"><label for="sukupuoli">Sukupuoli:</label></td>
+                
+                <td>
+                   
+                    <input type="radio" id="mies" value="mies" name="sukupuoli">Mies
+                    <br>
+                    <input type="radio" id="nainen" value="nainen" name="sukupuoli">Nainen
+                    <br>
+                    <input type="radio" id="muu" value="muu" name="sukupuoli">Muu
+                    </td>
+                </tr>
+                <tr>
+                    <td id="label"><label for="hobbies" multiple>Harrastukset</label></td>
+                
+                    <td>
+                        <input type="checkbox" id="Pelaaminen" value="Pelaaminen" name="hobbies[]">Pelaaminen
+                        <br>
+                        <input type="checkbox" id="Lenkkeily" value="Lenkkeily" name="hobbies[]">Lenkkeily
+                        <br>
+                        <input type="checkbox" id="Kuntosali" value="Kuntosali" name="hobbies[]" checked>Kuntosali
+                        <br>
+                        <input type="checkbox" id="Lukeminen" value="Lukeminen" name="hobbies[]">Lukeminen
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="reset">
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="submit">
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="image" name="submit" src="kuvat/Koira.jpg" alt="Submit">
+                    </td>
+                </tr>
+        </table>
+        </form>
+   
+        
+    </body>
+</html>

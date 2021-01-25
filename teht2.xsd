@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="kurssi">		<!-- kurssi ALKU-->
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="luennot" maxOccurs="unbounded">				<!-- luennot ALKU-->
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="luennoija" maxOccurs="unbounded" minOccurs="1">		<!-- luennoija ALKU-->
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="nimi" type="xs:string"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>									<!-- luennoija LOPPU-->
+							<xs:element name="luokka">				<!-- luokka ALKU-->
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:enumeration value="A212"/>
+										<xs:enumeration value="A214"/>
+										<xs:enumeration value="A216"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>							<!-- luokka LOPPU-->
+							<xs:element name="luentoaika" maxOccurs="unbounded">				<!-- luentoaika ALKU-->
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="kk" type="xs:string"/>
+										<xs:element name="paiva" type="xs:string"/>
+										<xs:element name="klo" type="xs:string"/>
+										<xs:element name="vuosi" type="xs:string"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>							<!-- luentoaika LOPPU-->
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>				<!-- luennot LOPPU-->
+				<xs:element name="tentti">					<!-- tentti ALKU-->
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="paikka">
+								<xs:complexType>
+									<xs:attribute name="oppilaitos" type="xs:string" fixed="TEKU"/>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="tehtava" minOccurs="2" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="maxpisteet">
+											<xs:simpleType>
+												<xs:restriction base="xs:integer">
+													<xs:minInclusive value="0"/>
+													<xs:maxInclusive value="6"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="kysymys" type="xs:string"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute name="kestoaika">
+							<xs:simpleType>
+								<xs:restriction base="xs:integer">
+									<xs:pattern value="[1-4]{1}"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+					</xs:complexType>
+				</xs:element>				<!-- tentti LOPPU-->
+				<xs:element name="nimi">					<!-- nimi ALKU -->
+					<xs:complexType>
+						<xs:attribute name="laajuus" use="required">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:pattern value="\d{1}ov"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+						<xs:attribute name="tunnus" type="xs:string" use="required"/>
+						<xs:attribute name="kieli" use="optional">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:enumeration value="SUOMI"/>
+									<xs:enumeration value="ENGLANTI"/>
+									<xs:enumeration value="RUOTSI"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+					</xs:complexType>
+				</xs:element>				<!-- nimi LOPPU-->
+				<xs:element name="kuvaus" type="xs:string"/>
+				<xs:element name="harjoitustyot">					<!-- harjoitustyöt ALKU-->
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="palautuspvm" type="xs:string"/>
+							<xs:element name="kuvaus" type="xs:string"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>				<!-- harjoitustyöt LOPPU-->
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>						<!-- kurssi LOPPU-->
+</xs:schema>

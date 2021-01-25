@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF8"?>
+<kurssit>
+    <kurssi>
+        <nimi laajuus="5op" kieli="suomi, ruotsi, englanti" tunnus="WEB20">
+        Webohjelmointi
+        </nimi>
+        <kuvaus>
+            Kurssilla opiskellaan erilaisia WEB-ohjelmointitekniikoita.
+        </kuvaus>
+        <luennot>
+            <luento>
+                <luokka nro="A212, A214, A216">
+                202
+                </luokka>
+                <luennoija>
+                    <nimi>
+                    Jussi Koistinen
+                    </nimi>
+                </luennoija>
+                <luentoaika>
+                    <kk>2</kk>
+                    <paiva>19</paiva>
+                    <klo>16</klo>
+                    <vuosi>2020</vuosi>
+                </luentoaika>
+            </luento>
+        </luennot>
+        <tentti kestoaika="3">
+            
+            <paikka oppilaitos="TEKU">
+                
+            </paikka>
+            <tehtava>
+                <max_pisteet>
+                6
+                </max_pisteet>
+                <kysymys>
+                </kysymys>
+            </tehtava>
+             <tehtava>
+                <max_pisteet>
+                </max_pisteet>
+                <kysymys>
+                </kysymys>
+            </tehtava>
+        </tentti>
+        <harjoitustyot>
+            <harjoitustyo>
+                <kuvaus>
+                </kuvaus>
+                <palautuspvm>
+                </palautuspvm>
+            </harjoitustyo>
+        </harjoitustyot>
+    </kurssi>
+</kurssit>

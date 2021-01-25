@@ -1,0 +1,13 @@
+#blue{
+    color: lightblue;
+    cursor: url(kuvat/Koira.jpg), auto;
+}
+
+#lista{
+    padding: 50px;
+    list-style-image: url(kuvat/fox.png);
+    word-spacing: 20px;
+}
+h1{
+white-space: nowrap;
+}

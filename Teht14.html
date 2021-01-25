@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Teht&auml;v&auml; 14</title>
+        <style>
+           
+            .flex{
+               
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                height:100px;
+                border: 1px solid black;
+                flex-wrap: nowrap;
+                background-color: lightgray;
+                justify-content: space-between;
+                padding: 5px 0px 5px 5px;
+            }
+           
+            form{
+                flex-wrap: nowrap;
+            }
+            .right{
+                width:250px;
+                margin:0px;
+                text-align: right;
+                flex: 1 1 auto;
+                flex-wrap: nowrap;
+            }
+            .left{
+                width:500px;
+                margin: 0px;
+                align-content: left;
+                flex: 1 1 auto;
+                flex-wrap:  nowrap;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="flex">
+            
+               
+                    <div class="left">
+                        <form>
+                        <a href="https://www.savonia.fi" target="_blank">Savonia (linkki)</a> 
+                            <select>
+                                <option>Valitse</option>
+                            </select>
+                            </form>
+                    </div>
+                    <div class="right">
+                         <form>
+                         <input type="search" value="Search"><button type="button" onclick="search">Search</button>
+                        </form>
+                    </div>
+                
+            
+        </div>
+    </body>
+</html>

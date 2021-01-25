@@ -1,0 +1,78 @@
+body{
+    font-family:Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        font-size: 10pt;
+}
+.container{
+    width: 500px;
+    height: 350px;
+    display: grid;
+    grid-template-columns: 80px 1fr ;
+    grid-template-rows: 1fr 1fr ;
+    border: 2px solid black;
+    padding: 1px;
+}
+.container > div{
+    font-size: 10pt;
+   
+    text-align: left;
+    border: 2px solid black;
+    vertical-align: center;
+}
+.henkilosto{
+    text-align: justify;
+    width: 70px;
+    height: 100px;
+}
+.koulutus_container{
+    display: grid;
+    width: 410;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+    height: 100px;
+    text-align: justify;
+}
+.koulutus {
+    border: 2px solid black;
+    text-align: justify;
+}
+.koulutukset {
+    vertical-align: center;
+    text-align: justify;
+    display: grid;
+    height: 40px;
+    grid-template-rows: 1fr ;
+    grid-template-columns: 1fr 1fr 1fr;
+    
+}
+.koulutukset > div{
+    
+    width: 131px;
+    border: 2px solid black;
+}
+.ika_container{
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+}
+.ika{
+    border: 2px solid black;
+}
+.iat >div{
+    border: 2px solid black;
+}
+.loput{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.loput >div{
+    border: 2px solid black;
+    align-content: left;
+}
+.lista{
+    background-color: brown;
+    align-content: left;
+
+    
+}
